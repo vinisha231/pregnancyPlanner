@@ -1,0 +1,16 @@
+* {
+    margin-top: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#7597de, #2b1055);
+}
+
+
+.home-button{
+    color: black; 
+}
