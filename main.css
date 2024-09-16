@@ -1,3 +1,4 @@
+
 * {
     margin-top: 0;
     padding: 0; 
@@ -7,10 +8,153 @@
 
 body {
     min-height: 100vh;
-    background: linear-gradient(#7597de, #2b1055);
+    background: linear-gradient(#ef93c1, #e96767, #fc93cd);
+}
+
+header {
+    position: fixed;  /* Keeps header in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 70px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; 
+}
+
+header .h1 {
+    color: #2b1055;
+    font-weight: 600; 
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a{
+    text-decoration: none;
+    padding: 5px 5px;
+    color:  #2b1055;
+}
+
+header a:hover{
+    color: black;
+    background-color: #ede2ce;
 }
 
 
-.home-button{
-    color: black; 
+/* Ensure the home section is positioned relative to its container */
+.preg {
+    position: relative;
+    top: 400px;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0e6f6; /* Add a background color or image */
+    overflow-y: auto; /* Enables vertical scrolling */
+    right: 0;
+    z-index: 1;
+    padding: 20px; /* Add padding if necessary */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width/height */
 }
+
+/* Ensure the .home section does not overlap with the preg section */
+.home {
+    min-height: 200vh; /* Enough height for the entire content, adjust as needed */
+    padding-bottom: 100px; /* Add padding at the bottom to allow scrolling */
+}
+
+
+/* General Styles */
+.container {
+    text-align: center;
+    z-index:10;
+    margin-top: 50px;
+    font-size: 24px;
+    color: black;
+}
+
+.container h1 {
+    font-size: 60px;
+    font-weight: 400px;
+}
+
+
+/* Ensure the home section contains .preg initially */
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    overflow: hidden; /* No scrollbars in the home section itself */
+}
+
+.preg {
+    position: relative;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0e6f6; /* Background color or image */
+    overflow-y: auto; /* Enable vertical scrolling */
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.preg p {
+    font-size: 1.5em;
+    color: #2b1055;
+    line-height: 1.6;
+    margin: 20px;
+    text-align: justify;
+}
+
+/* Inspiration section initially hidden */
+.inspiration {
+    display: none; /* Hidden by default */
+    color: darkslateblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 80px;
+    height: 100vh;
+    background-color: #e6f7ff; /* Background color for inspiration */
+}
+
+.inspiration h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: darkslateblue;
+}
+
+.inspiration div {
+    max-width: 50%;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Add active class when inspiration section is visible */
+.inspiration.active {
+    display: flex; /* Show the section when active */
+}
+
