@@ -7,15 +7,17 @@
 
 // ── STATE ──────────────────────────────────────────────────────────
 let state = {
-    lmpDate:       null,
-    dueDate:       null,
-    momName:       '',
-    currentWeek:   0,
-    selectedWeek:  1,
-    weights:       [],   // [{date, value}]
-    symptoms:      [],   // [{date, items[], notes}]
-    appointments:  [],   // [{id, date, time, doctor, type, notes}]
-    checklists:    {},   // {listKey: {itemKey: bool}}
+    lmpDate:        null,
+    dueDate:        null,
+    momName:        '',
+    partnerName:    '',
+    partnerTitle:   '',
+    currentWeek:    0,
+    selectedWeek:   1,
+    weights:        [],   // [{date, value}]
+    symptoms:       [],   // [{date, items[], notes}]
+    appointments:   [],   // [{id, date, time, doctor, type, notes}]
+    checklists:     {},   // {listKey: {itemKey: bool}}
     activeChecklist: 'hospital',
 };
 
@@ -82,6 +84,8 @@ function saveToStorage() {
         lmpDate:      state.lmpDate  ? state.lmpDate.toISOString()  : null,
         dueDate:      state.dueDate  ? state.dueDate.toISOString()  : null,
         momName:      state.momName,
+        partnerName:  state.partnerName,
+        partnerTitle: state.partnerTitle,
         weights:      state.weights,
         symptoms:     state.symptoms,
         appointments: state.appointments,
@@ -97,6 +101,8 @@ function loadFromStorage() {
         if (saved.lmpDate) state.lmpDate = new Date(saved.lmpDate);
         if (saved.dueDate) state.dueDate = new Date(saved.dueDate);
         state.momName      = saved.momName      || '';
+        state.partnerName  = saved.partnerName  || '';
+        state.partnerTitle = saved.partnerTitle || '';
         state.weights      = saved.weights      || [];
         state.symptoms     = saved.symptoms     || [];
         state.appointments = saved.appointments || [];
@@ -105,17 +111,28 @@ function loadFromStorage() {
 }
 
 // ── PREGNANCY SETUP ────────────────────────────────────────────────
+// ── PARTNER TOGGLE ─────────────────────────────────────────────────
+function togglePartnerFields() {
+    const checked = document.getElementById('partnerToggle').checked;
+    document.getElementById('partnerFields').style.display = checked ? 'block' : 'none';
+}
+
 function setupPregnancy() {
-    const lmpVal  = document.getElementById('lmpDate').value;
-    const dueVal  = document.getElementById('dueDateInput').value;
-    const name    = document.getElementById('momName').value.trim();
+    const lmpVal       = document.getElementById('lmpDate').value;
+    const dueVal       = document.getElementById('dueDateInput').value;
+    const name         = document.getElementById('momName').value.trim();
+    const hasPartner   = document.getElementById('partnerToggle').checked;
+    const partnerName  = hasPartner ? document.getElementById('partnerName').value.trim()  : '';
+    const partnerTitle = hasPartner ? document.getElementById('partnerTitle').value         : '';
 
     if (!lmpVal && !dueVal) {
         alert('Please enter your LMP date or due date.');
         return;
     }
 
-    state.momName = name;
+    state.momName      = name;
+    state.partnerName  = partnerName;
+    state.partnerTitle = partnerTitle;
 
     if (lmpVal) {
         state.lmpDate = new Date(lmpVal + 'T12:00:00');
@@ -168,9 +185,25 @@ function showDashboard() {
 
     const data = weeklyData[Math.min(40, Math.max(1, week))];
     if (data) {
-        setText('dashFruit',     data.fruit);
-        setText('dashFruitName', data.fruitName);
+        setText('dashFruit',       data.fruit);
+        setText('dashFruitName',   data.fruitName);
         setText('dashDevelopment', data.baby);
+    }
+
+    // Couple banner
+    const momLabel     = state.momName  ? state.momName  : 'mama';
+    const partnerLabel = state.partnerName ? ` & ${state.partnerName}` : '';
+    setText('coupleNames', `${momLabel}${partnerLabel}'s journey 💕`);
+    setText('dueDateLabel', `due ${fmtDate(state.dueDate)}`);
+
+    // Partner bento card
+    const partnerCard = document.getElementById('partnerCard');
+    if (state.partnerName) {
+        partnerCard.style.display = 'flex';
+        setText('partnerDisplayName',  state.partnerName);
+        setText('partnerDisplayTitle', state.partnerTitle || 'Partner');
+    } else {
+        partnerCard.style.display = 'none';
     }
 
     document.getElementById('setupCard').style.display     = 'none';
