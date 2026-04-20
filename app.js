@@ -135,11 +135,9 @@ function resetSetup() {
     state.lmpDate = null;
     state.dueDate = null;
     saveToStorage();
-    document.getElementById('setupCard').style.display = 'block';
+    document.getElementById('setupCard').style.display     = 'block';
     document.getElementById('dashboardGrid').style.display = 'none';
-    document.getElementById('progressSection').style.display = 'none';
-    document.getElementById('quickPeek').style.display = 'none';
-    document.getElementById('resetArea').style.display = 'none';
+    document.getElementById('resetArea').style.display     = 'none';
 }
 
 function getCurrentWeek() {
@@ -177,9 +175,7 @@ function showDashboard() {
 
     document.getElementById('setupCard').style.display     = 'none';
     document.getElementById('dashboardGrid').style.display = 'grid';
-    document.getElementById('progressSection').style.display = 'block';
-    document.getElementById('quickPeek').style.display       = 'block';
-    document.getElementById('resetArea').style.display       = 'block';
+    document.getElementById('resetArea').style.display     = 'block';
 
     renderWeeklyData();
 }
