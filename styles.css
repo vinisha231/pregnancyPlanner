@@ -323,3 +323,40 @@ body::before {
 .t1 { background:rgba(255,45,120,.12); color:var(--pink-bright); border:1px solid rgba(255,45,120,.2); }
 .t2 { background:rgba(155,89,182,.12); color:#C980FF; border:1px solid rgba(155,89,182,.2); }
 .t3 { background:rgba(0,229,176,.1); color:var(--mint); border:1px solid rgba(0,229,176,.2); }
+
+/* ── DASH BOTTOM GRID ── */
+.dash-bottom { display:grid; grid-template-columns: 2fr 1.2fr 1fr; gap:1rem; }
+.dash-dev-card, .dash-quick, .dash-partner-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    backdrop-filter: blur(12px);
+    transition: all .25s;
+}
+.dash-dev-card:hover, .dash-quick:hover, .dash-partner-card:hover { border-color: var(--card-hover); box-shadow: var(--glow-soft); }
+
+.ddc-label { font-size: .72rem; font-weight: 800; color: var(--muted); text-transform:lowercase; letter-spacing:.4px; margin-bottom:1rem; }
+.ddc-fruit-row { display:flex; gap:1rem; align-items:flex-start; margin-bottom:1rem; }
+.ddc-fruit { font-size: 3rem; line-height:1; flex-shrink:0; }
+.ddc-size { font-size: .82rem; color: var(--pink-soft); font-weight:700; margin-bottom:.4rem; }
+.ddc-text { font-size: .88rem; color: var(--text-soft); line-height:1.65; }
+
+.dq-title { font-size: .72rem; font-weight:800; color:var(--muted); text-transform:lowercase; letter-spacing:.4px; margin-bottom:.75rem; }
+.dq-grid { display:grid; grid-template-columns:1fr 1fr; gap:.5rem; }
+.dq-btn {
+    display:flex; flex-direction:column; align-items:center; gap:.3rem;
+    background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+    border-radius: var(--radius-sm); padding:.75rem .5rem;
+    font-family:inherit; font-size:.7rem; font-weight:700; color:var(--text-soft);
+    cursor:pointer; transition: all .2s; text-align:center;
+}
+.dq-btn span { font-size:.68rem; line-height:1.2; }
+.dq-btn:hover { background:var(--pink-dim); border-color:rgba(255,45,120,.3); color:var(--text); }
+
+.dash-partner-card { display:flex; flex-direction:column; align-items:center; text-align:center; justify-content:center; gap:.5rem; }
+.dpc-avatar { width:56px; height:56px; background:var(--grad); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.8rem; box-shadow:var(--glow-soft); }
+.dpc-label { font-size:.7rem; font-weight:800; color:var(--muted); text-transform:lowercase; letter-spacing:.4px; }
+.dpc-name  { font-size:1.3rem; font-weight:900; color:var(--text); }
+.dpc-title { font-size:.78rem; font-weight:700; color:var(--pink-bright); }
+.dpc-note  { font-size:.75rem; color:var(--muted); }
