@@ -452,3 +452,29 @@ body::before {
 .appt-meta strong { font-size:.95rem; font-weight:800; color:var(--text); }
 .appt-meta .appt-when { font-size:.8rem; color:var(--muted); margin-top:.15rem; }
 .appt-meta .appt-notes { font-size:.78rem; color:var(--muted); margin-top:.3rem; }
+
+/* ── CHECKLISTS ── */
+.tab-bar { display:flex; gap:.4rem; flex-wrap:wrap; margin-bottom:1.25rem; }
+.tab-btn { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); color:var(--muted); padding:.45rem 1.1rem; border-radius:var(--radius-pill); font-family:inherit; font-size:.82rem; font-weight:700; cursor:pointer; transition:all .2s; }
+.tab-btn:hover:not(.active) { border-color:rgba(255,45,120,.35); color:var(--pink-bright); background:var(--pink-dim); }
+.tab-btn.active { background:var(--grad); border-color:transparent; color:#fff; box-shadow:var(--glow-soft); }
+.checklist-layout { display:grid; grid-template-columns:1fr 300px; gap:1.5rem; align-items:start; }
+.cl-main { background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius); padding:2rem; backdrop-filter:blur(12px); }
+.cl-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; padding-bottom:.75rem; border-bottom:1px solid rgba(255,255,255,.07); }
+.cl-header h3 { font-size:1rem; font-weight:800; color:var(--text); }
+.checklist-progress { display:flex; align-items:center; gap:.75rem; margin-bottom:1.25rem; font-size:.8rem; color:var(--muted); font-weight:600; }
+.mini-bar { flex:1; height:7px; background:rgba(255,45,120,.1); border-radius:var(--radius-pill); overflow:hidden; }
+.mini-fill { height:100%; background:var(--grad); border-radius:var(--radius-pill); transition:width .4s ease; box-shadow:0 0 8px var(--pink-glow); }
+.checklist-group { margin-bottom:1.25rem; }
+.checklist-group-title { font-size:.68rem; font-weight:800; text-transform:uppercase; letter-spacing:.8px; color:var(--pink-bright); margin-bottom:.5rem; padding-left:.25rem; }
+.check-item { display:flex; align-items:center; gap:.65rem; padding:.42rem .6rem; border-radius:var(--radius-sm); cursor:pointer; transition:all .15s; font-size:.86rem; font-weight:500; color:var(--text-soft); }
+.check-item:hover { background:var(--pink-dim); color:var(--text); }
+.check-item input[type=checkbox] { accent-color:var(--pink); width:16px; height:16px; flex-shrink:0; }
+.check-item.checked { text-decoration:line-through; color:var(--muted); }
+.cls-progress-card, .cls-tip-card { background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.5rem; margin-bottom:1rem; backdrop-filter:blur(12px); }
+.clsp-label { font-size:.68rem; font-weight:800; color:var(--muted); text-transform:lowercase; letter-spacing:.4px; margin-bottom:.4rem; }
+.clsp-pct { font-size:2.5rem; font-weight:900; background:var(--grad-text); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.clsp-count { font-size:.78rem; color:var(--muted); margin-top:.4rem; }
+.clt-icon { font-size:1.5rem; margin-bottom:.4rem; }
+.cls-tip-card strong { font-size:.85rem; color:var(--text); font-weight:800; display:block; margin-bottom:.4rem; }
+.cls-tip-card p { font-size:.8rem; color:var(--muted); }
