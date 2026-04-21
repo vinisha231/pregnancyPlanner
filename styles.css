@@ -52,3 +52,31 @@ body {
 
 h1,h2,h3,h4 { line-height: 1.2; color: var(--text); }
 p { color: var(--text-soft); line-height: 1.7; }
+
+/* ── BACKGROUND BLOBS ── */
+body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background:
+        radial-gradient(ellipse 70% 50% at 105% -5%,  rgba(255,45,120,.16) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 45% at -5% 105%,  rgba(155,89,182,.14) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 40% at 50%  50%,  rgba(255,45,120,.03) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: -1;
+}
+.blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: .15;
+    z-index: -1;
+    animation: floatBlob 14s ease-in-out infinite;
+    pointer-events: none;
+}
+.blob-1 { width:700px; height:700px; background:var(--pink);   top:-220px; right:-180px; }
+.blob-2 { width:550px; height:550px; background:var(--purple); bottom:-180px; left:-180px; animation-delay:-6s; }
+.blob-3 { width:400px; height:400px; background:#FF85AC;       top:42%; left:38%; animation-delay:-10s; opacity:.08; }
+@keyframes floatBlob {
+    0%,100% { transform: translateY(0) scale(1); }
+    50%      { transform: translateY(-28px) scale(1.05); }
+}
