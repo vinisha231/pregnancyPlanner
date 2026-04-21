@@ -257,3 +257,49 @@ body::before {
     backdrop-filter: blur(16px);
     box-shadow: var(--shadow);
 }
+
+/* ── DASHBOARD ── */
+.couple-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255,45,120,.12), rgba(155,89,182,.08));
+    border: 1px solid rgba(255,45,120,.25);
+    border-radius: var(--radius);
+    padding: 1.4rem 2rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(12px);
+}
+.cb-names { font-size: 1.6rem; font-weight: 900; background: var(--grad-text); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.cb-due { font-size: .85rem; color: var(--muted); margin-top: .2rem; font-weight: 600; }
+
+.stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.stat-tile {
+    border-radius: var(--radius);
+    padding: 1.75rem 1.5rem;
+    border: 1px solid rgba(255,255,255,.06);
+    backdrop-filter: blur(12px);
+    transition: all .25s;
+    position: relative;
+    overflow: hidden;
+}
+.stat-tile::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+.stat-tile:hover { transform: translateY(-4px); box-shadow: var(--glow-soft); }
+.stat-pink   { background: rgba(255,45,120,.08); }
+.stat-pink::before   { background: var(--grad); }
+.stat-purple { background: rgba(155,89,182,.08); }
+.stat-purple::before { background: linear-gradient(90deg, #9B59B6, #C980FF); }
+.stat-mint   { background: rgba(0,229,176,.06); }
+.stat-mint::before   { background: linear-gradient(90deg, #00E5B0, #00B4D8); }
+.stat-gold   { background: rgba(255,217,61,.06); }
+.stat-gold::before   { background: linear-gradient(90deg, var(--yellow), #FFB020); }
+
+.st-label { font-size: .72rem; font-weight: 800; color: var(--muted); text-transform: lowercase; letter-spacing: .4px; margin-bottom: .4rem; }
+.st-big   { font-size: 2.8rem; font-weight: 900; line-height: 1; color: var(--text); }
+.st-date  { font-size: 1.4rem; }
+.st-sub   { font-size: .75rem; color: var(--muted); margin-top: .3rem; }
