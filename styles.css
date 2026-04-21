@@ -35,3 +35,20 @@
     --radius-pill: 999px;
     --nav-h:       68px;
 }
+
+/* ── RESET + BODY ── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h1,h2,h3,h4 { line-height: 1.2; color: var(--text); }
+p { color: var(--text-soft); line-height: 1.7; }
