@@ -6,229 +6,295 @@
     <title>Mama's Journey ✨</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
 
-<!-- bg blobs -->
 <div class="blob blob-1"></div>
 <div class="blob blob-2"></div>
 <div class="blob blob-3"></div>
 
-<!-- ═══════════════════ NAVBAR ═══════════════════ -->
+<!-- ══════════════ NAVBAR ══════════════ -->
 <nav class="navbar">
-    <div class="nav-inner">
-        <div class="nav-brand">🤰 mama's journey</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a class="nav-link active" data-section="dashboard" href="#dashboard">🏠 home</a></li>
-            <li><a class="nav-link" data-section="weekly"       href="#weekly">📅 weekly</a></li>
-            <li><a class="nav-link" data-section="health"       href="#health">💊 health</a></li>
-            <li><a class="nav-link" data-section="appointments" href="#appointments">📆 appts</a></li>
-            <li><a class="nav-link" data-section="checklists"   href="#checklists">✅ lists</a></li>
-            <li><a class="nav-link" data-section="nutrition"    href="#nutrition">🍎 food</a></li>
-            <li><a class="nav-link" data-section="chat"         href="#chat">🤖 ai chat</a></li>
-        </ul>
-        <button class="hamburger" onclick="toggleNav()">☰</button>
-    </div>
+    <div class="nav-logo">🤰 mama's journey</div>
+    <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link active" data-section="dashboard" href="#dashboard">🏠 home</a></li>
+        <li><a class="nav-link" data-section="weekly"       href="#weekly">📅 weekly</a></li>
+        <li><a class="nav-link" data-section="health"       href="#health">💊 health</a></li>
+        <li><a class="nav-link" data-section="appointments" href="#appointments">📆 appointments</a></li>
+        <li><a class="nav-link" data-section="checklists"   href="#checklists">✅ checklists</a></li>
+        <li><a class="nav-link" data-section="nutrition"    href="#nutrition">🍎 nutrition</a></li>
+        <li><a class="nav-link" data-section="chat"         href="#chat">🤖 ai chat</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleNav()">☰</button>
 </nav>
 
-<!-- ═══════════════════ DASHBOARD ═══════════════════ -->
+<!-- ══════════════ DASHBOARD ══════════════ -->
 <section id="dashboard" class="section active">
 
+    <!-- HERO -->
     <div class="hero">
-        <div class="hero-tag">✨ your pregnancy journey</div>
-        <h1 class="hero-title">track every<br><span class="grad-text">precious moment</span></h1>
-        <p class="hero-sub">from your first heartbeat to hello, world 🌎</p>
+        <div class="hero-left">
+            <div class="hero-badge">✨ your pregnancy companion</div>
+            <h1 class="hero-title">
+                track every<br>
+                <span class="grad-text">precious moment</span>
+            </h1>
+            <p class="hero-sub">from your first heartbeat to hello, world 🌎 — everything you need for a confident, informed pregnancy journey.</p>
+            <div class="hero-features">
+                <span class="feat-pill">📅 week-by-week tracker</span>
+                <span class="feat-pill">💊 symptom log</span>
+                <span class="feat-pill">🤖 AI assistant</span>
+                <span class="feat-pill">✅ checklists</span>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-stat-grid">
+                <div class="hero-stat"><span class="hero-stat-num">40</span><span class="hero-stat-label">weeks tracked</span></div>
+                <div class="hero-stat"><span class="hero-stat-num">100+</span><span class="hero-stat-label">food safety tips</span></div>
+                <div class="hero-stat"><span class="hero-stat-num">4</span><span class="hero-stat-label">checklists</span></div>
+                <div class="hero-stat"><span class="hero-stat-num">∞</span><span class="hero-stat-label">AI questions</span></div>
+            </div>
+        </div>
     </div>
 
-    <!-- SETUP CARD -->
-    <div class="card setup-card" id="setupCard">
-        <div class="card-label">let's get started 🫶</div>
-        <h2 class="setup-title">when is your due date?</h2>
-
-        <div class="form-row">
-            <div class="form-group">
-                <label>your name <span class="optional">(optional)</span></label>
-                <input type="text" id="momName" placeholder="e.g. Sarah ✨">
-            </div>
-            <div class="form-group">
-                <label>first day of last period (LMP)</label>
-                <input type="date" id="lmpDate">
+    <!-- SETUP FORM -->
+    <div class="setup-section" id="setupCard">
+        <div class="setup-left">
+            <div class="setup-badge">get started 🫶</div>
+            <h2 class="setup-title">when is your<br><span class="grad-text">due date?</span></h2>
+            <p class="setup-desc">enter your last period date or due date and we'll calculate everything — your current week, trimester, days left, and week-by-week development.</p>
+            <div class="setup-features">
+                <div class="sf-item">🎯 <span>automatic week & trimester calculation</span></div>
+                <div class="sf-item">👶 <span>baby size comparisons every week</span></div>
+                <div class="sf-item">💡 <span>personalised tips & reminders</span></div>
+                <div class="sf-item">🤝 <span>optional partner profile</span></div>
             </div>
         </div>
-
-        <div class="or-divider"><span>or enter due date directly</span></div>
-        <div class="form-group">
-            <input type="date" id="dueDateInput">
-        </div>
-
-        <!-- Partner profile (optional) -->
-        <div class="partner-toggle-row">
-            <label class="toggle-label">
-                <input type="checkbox" id="partnerToggle" onchange="togglePartnerFields()">
-                <span class="toggle-track"><span class="toggle-thumb"></span></span>
-                add partner profile <span class="optional">(optional)</span>
-            </label>
-        </div>
-
-        <div id="partnerFields" class="partner-fields">
-            <div class="form-row">
+        <div class="setup-right">
+            <div class="setup-form-card">
                 <div class="form-group">
-                    <label>partner's name</label>
-                    <input type="text" id="partnerName" placeholder="e.g. James 🫶">
+                    <label>your name <span class="opt">(optional)</span></label>
+                    <input type="text" id="momName" placeholder="e.g. Sarah ✨">
                 </div>
                 <div class="form-group">
-                    <label>preferred title</label>
-                    <select id="partnerTitle">
-                        <option value="Dad">Dad</option>
-                        <option value="Baba">Baba</option>
-                        <option value="Papa">Papa</option>
-                        <option value="Daddy">Daddy</option>
-                        <option value="Partner">Partner</option>
-                        <option value="Bonus Dad">Bonus Dad</option>
-                        <option value="Other">Other</option>
-                    </select>
+                    <label>first day of last period (LMP)</label>
+                    <input type="date" id="lmpDate">
+                </div>
+                <div class="or-divider"><span>or enter due date directly</span></div>
+                <div class="form-group">
+                    <input type="date" id="dueDateInput">
+                </div>
+
+                <div class="partner-toggle-row">
+                    <label class="toggle-label">
+                        <input type="checkbox" id="partnerToggle" onchange="togglePartnerFields()">
+                        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                        add partner profile <span class="opt">(optional)</span>
+                    </label>
+                </div>
+                <div id="partnerFields" class="partner-fields">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>partner's name</label>
+                            <input type="text" id="partnerName" placeholder="e.g. James 🫶">
+                        </div>
+                        <div class="form-group">
+                            <label>preferred title</label>
+                            <select id="partnerTitle">
+                                <option value="Dad">Dad</option>
+                                <option value="Baba">Baba</option>
+                                <option value="Papa">Papa</option>
+                                <option value="Daddy">Daddy</option>
+                                <option value="Partner">Partner</option>
+                                <option value="Bonus Dad">Bonus Dad</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-primary btn-full" onclick="setupPregnancy()">start my journey →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- DASHBOARD (hidden until setup) -->
+    <div id="dashboardGrid" style="display:none">
+
+        <!-- couple banner -->
+        <div class="couple-banner">
+            <div class="cb-left">
+                <div class="cb-names" id="coupleNames">your journey 💕</div>
+                <div class="cb-due" id="dueDateLabel">due date loading…</div>
+            </div>
+            <button class="btn-ghost-sm" onclick="resetSetup()">↺ edit details</button>
+        </div>
+
+        <!-- 4 stat tiles -->
+        <div class="stat-row">
+            <div class="stat-tile stat-pink">
+                <div class="st-label">weeks pregnant</div>
+                <div class="st-big" id="weekNum">—</div>
+                <div class="st-sub">of 40 weeks</div>
+            </div>
+            <div class="stat-tile stat-purple">
+                <div class="st-label">trimester</div>
+                <div class="st-big" id="trimesterNum">—</div>
+                <div class="st-sub">of 3</div>
+            </div>
+            <div class="stat-tile stat-mint">
+                <div class="st-label">days to go</div>
+                <div class="st-big" id="daysLeft">—</div>
+                <div class="st-sub">hang in there 💪</div>
+            </div>
+            <div class="stat-tile stat-gold">
+                <div class="st-label">due date</div>
+                <div class="st-big st-date" id="dueDateDisplay">—</div>
+                <div class="st-sub">mark your calendar 📅</div>
+            </div>
+        </div>
+
+        <!-- progress row -->
+        <div class="progress-full">
+            <div class="pf-top">
+                <span class="pf-title">pregnancy progress</span>
+                <span class="pf-pct" id="progressPercent">0%</span>
+            </div>
+            <div class="pf-track"><div class="pf-fill" id="progressBar"></div></div>
+            <div class="pf-labels">
+                <span class="pf-tri t1">🌱 1st trimester — weeks 1–13</span>
+                <span class="pf-tri t2">🌸 2nd trimester — weeks 14–26</span>
+                <span class="pf-tri t3">🌺 3rd trimester — weeks 27–40</span>
+            </div>
+        </div>
+
+        <!-- bottom grid: development + fruit + partner -->
+        <div class="dash-bottom">
+            <div class="dash-dev-card">
+                <div class="ddc-label">👶 baby this week</div>
+                <div class="ddc-fruit-row">
+                    <span class="ddc-fruit" id="dashFruit">🌱</span>
+                    <div>
+                        <div class="ddc-size">size of a <strong id="dashFruitName">—</strong></div>
+                        <p class="ddc-text" id="dashDevelopment"></p>
+                    </div>
+                </div>
+                <button class="btn-link" onclick="showSection('weekly')">see full week details →</button>
+            </div>
+
+            <div class="dash-quick">
+                <div class="dq-title">quick links</div>
+                <div class="dq-grid">
+                    <button class="dq-btn" onclick="showSection('weekly')">📅<span>weekly tracker</span></button>
+                    <button class="dq-btn" onclick="showSection('health')">💊<span>log symptoms</span></button>
+                    <button class="dq-btn" onclick="showSection('appointments')">📆<span>appointments</span></button>
+                    <button class="dq-btn" onclick="showSection('checklists')">✅<span>checklists</span></button>
+                    <button class="dq-btn" onclick="showSection('nutrition')">🍎<span>food guide</span></button>
+                    <button class="dq-btn" onclick="showSection('chat')">🤖<span>ask luna</span></button>
                 </div>
             </div>
-        </div>
 
-        <button class="btn-primary full-width" onclick="setupPregnancy()">start tracking →</button>
-    </div>
-
-    <!-- BENTO STATS (hidden until setup) -->
-    <div class="bento-grid" id="dashboardGrid" style="display:none">
-
-        <div class="bento-card bento-couple">
-            <div class="couple-names" id="coupleNames">your journey 💕</div>
-            <div class="bento-label" id="dueDateLabel">due date loading…</div>
-        </div>
-
-        <div class="bento-card bento-week">
-            <div class="bento-label">weeks pregnant</div>
-            <div class="bento-big" id="weekNum">—</div>
-            <div class="bento-sub">of 40 weeks</div>
-        </div>
-
-        <div class="bento-card bento-tri">
-            <div class="bento-label">trimester</div>
-            <div class="bento-big" id="trimesterNum">—</div>
-        </div>
-
-        <div class="bento-card bento-days">
-            <div class="bento-label">days to go</div>
-            <div class="bento-big" id="daysLeft">—</div>
-        </div>
-
-        <div class="bento-card bento-fruit">
-            <div class="bento-label">baby is the size of</div>
-            <div class="bento-fruit-emoji" id="dashFruit">🌱</div>
-            <div class="bento-fruit-name">a <strong id="dashFruitName">—</strong></div>
-        </div>
-
-        <div class="bento-card bento-progress">
-            <div class="bento-label">pregnancy progress</div>
-            <div class="progress-track">
-                <div class="progress-fill" id="progressBar"></div>
-            </div>
-            <div class="progress-pct-row">
-                <span>week 1</span>
-                <span class="pct-badge" id="progressPercent">0%</span>
-                <span>week 40</span>
-            </div>
-            <div class="tri-labels">
-                <span class="tri-tag t1">1st tri</span>
-                <span class="tri-tag t2">2nd tri</span>
-                <span class="tri-tag t3">3rd tri</span>
+            <div class="dash-partner-card" id="partnerCard" style="display:none">
+                <div class="dpc-avatar">🧑</div>
+                <div class="dpc-label">partner</div>
+                <div class="dpc-name" id="partnerDisplayName">—</div>
+                <div class="dpc-title" id="partnerDisplayTitle">—</div>
+                <p class="dpc-note">supporting you every step of the way 💕</p>
             </div>
         </div>
-
-        <div class="bento-card bento-dev">
-            <div class="bento-label">this week 🌟</div>
-            <p id="dashDevelopment" class="dev-text"></p>
-            <button class="btn-link" onclick="showSection('weekly')">see week details →</button>
-        </div>
-
-        <!-- Partner card (shown when partner set) -->
-        <div class="bento-card bento-partner" id="partnerCard" style="display:none">
-            <div class="partner-avatar">🧑</div>
-            <div>
-                <div class="bento-label">partner</div>
-                <div class="partner-display-name" id="partnerDisplayName">—</div>
-                <div class="partner-display-title" id="partnerDisplayTitle">—</div>
-            </div>
-        </div>
-
-    </div>
-
-    <div id="resetArea" style="text-align:center;margin-top:.75rem;display:none">
-        <button class="btn-ghost" onclick="resetSetup()">↺ change details</button>
     </div>
 </section>
 
-<!-- ═══════════════════ WEEKLY ═══════════════════ -->
+<!-- ══════════════ WEEKLY ══════════════ -->
 <section id="weekly" class="section">
     <div class="section-header">
-        <div class="section-tag">📅 weekly tracker</div>
-        <h2>baby's development</h2>
-    </div>
-
-    <div class="week-nav">
-        <button class="btn-secondary" onclick="changeWeek(-1)">← prev</button>
-        <div class="week-pill">week <span id="selectedWeek">1</span></div>
-        <button class="btn-secondary" onclick="changeWeek(1)">next →</button>
-    </div>
-
-    <div class="card week-card">
-        <div class="week-hero">
-            <div class="week-fruit-wrap">
-                <div class="week-fruit" id="fruitEmoji">🌱</div>
+        <div class="sh-left">
+            <div class="section-tag">📅 weekly tracker</div>
+            <h2>baby's <span class="grad-text">development</span></h2>
+            <p class="section-desc">follow your baby's growth week by week — from a tiny poppy seed to a full-term little one ready to meet the world.</p>
+        </div>
+        <div class="sh-right">
+            <div class="week-nav">
+                <button class="btn-secondary" onclick="changeWeek(-1)">← prev</button>
+                <div class="week-pill">week <span id="selectedWeek">1</span> <span class="week-of">of 40</span></div>
+                <button class="btn-secondary" onclick="changeWeek(1)">next →</button>
             </div>
-            <div class="week-meta">
-                <h3 id="weekTitle">Week 1</h3>
-                <div class="week-chips">
-                    <span class="chip pink-chip">🍓 <strong id="fruitName">—</strong></span>
-                    <span class="chip purple-chip" id="weekMeasurements"></span>
+            <button class="btn-ghost-sm" onclick="jumpToCurrentWeek()" style="margin-top:.5rem">jump to my week</button>
+        </div>
+    </div>
+
+    <div class="weekly-layout">
+        <!-- LEFT: fruit + size -->
+        <div class="weekly-sidebar">
+            <div class="ws-fruit-card">
+                <div class="wsf-circle">
+                    <div class="wsf-emoji" id="fruitEmoji">🌱</div>
+                </div>
+                <div class="wsf-name" id="fruitName">—</div>
+                <div class="wsf-label">baby is the size of a</div>
+                <div class="wsf-measurements" id="weekMeasurements"></div>
+            </div>
+            <div class="ws-week-info">
+                <div class="wsi-week" id="weekTitle">Week 1</div>
+                <div class="wsi-chips">
+                    <span class="chip pink-chip" id="trimChip">1st Trimester</span>
                 </div>
             </div>
         </div>
-        <div class="week-cards">
-            <div class="detail-card baby-card">
-                <div class="detail-icon">👶</div>
-                <h4>baby's development</h4>
-                <p id="babyDevelopment"></p>
+
+        <!-- CENTER: baby development -->
+        <div class="weekly-main">
+            <div class="wm-card baby-card">
+                <div class="wm-icon">👶</div>
+                <h3>baby's development</h3>
+                <p id="babyDevelopment" class="wm-body"></p>
             </div>
-            <div class="detail-card mom-card">
-                <div class="detail-icon">🤰</div>
-                <h4>mom's body</h4>
-                <p id="momSymptoms"></p>
+            <div class="wm-card mom-card">
+                <div class="wm-icon">🤰</div>
+                <h3>your body this week</h3>
+                <p id="momSymptoms" class="wm-body"></p>
             </div>
-            <div class="detail-card tip-card">
-                <div class="detail-icon">💡</div>
-                <h4>tip of the week</h4>
-                <p id="weekTip"></p>
+        </div>
+
+        <!-- RIGHT: tip + actions -->
+        <div class="weekly-right">
+            <div class="wr-tip-card">
+                <div class="wrt-top">
+                    <span class="wrt-icon">💡</span>
+                    <span class="wrt-label">tip of the week</span>
+                </div>
+                <p id="weekTip" class="wrt-body"></p>
+            </div>
+            <div class="wr-nav-card">
+                <p class="wrn-label">jump to a specific week</p>
+                <div class="wrn-grid" id="weekJumpGrid"></div>
             </div>
         </div>
     </div>
-    <div style="text-align:center;margin-top:.75rem">
-        <button class="btn-ghost" onclick="jumpToCurrentWeek()">jump to my week →</button>
-    </div>
 </section>
 
-<!-- ═══════════════════ HEALTH ═══════════════════ -->
+<!-- ══════════════ HEALTH ══════════════ -->
 <section id="health" class="section">
     <div class="section-header">
-        <div class="section-tag">💊 health log</div>
-        <h2>track how you feel</h2>
+        <div class="sh-left">
+            <div class="section-tag">💊 health tracking</div>
+            <h2>track how <span class="grad-text">you feel</span></h2>
+            <p class="section-desc">log daily symptoms and monitor your weight gain throughout pregnancy. your data is saved privately in your browser.</p>
+        </div>
     </div>
-    <div class="health-grid">
-        <div class="card">
-            <h3>daily symptom log 📋</h3>
-            <div class="inline-form">
-                <input type="date" id="symptomDate">
-                <button class="btn-primary" onclick="logSymptoms()">save</button>
+
+    <div class="health-layout">
+        <!-- symptom tracker -->
+        <div class="health-panel">
+            <div class="hp-header">
+                <h3>daily symptom log 📋</h3>
+                <div class="inline-form">
+                    <input type="date" id="symptomDate">
+                    <button class="btn-primary btn-sm" onclick="logSymptoms()">save log</button>
+                </div>
             </div>
+            <p class="hp-desc">select everything you're experiencing today, add notes, and we'll track patterns over time.</p>
             <div class="symptom-grid">
                 <label class="sym"><input type="checkbox" value="nausea"> 🤢 nausea</label>
                 <label class="sym"><input type="checkbox" value="vomiting"> 🤮 vomiting</label>
@@ -239,145 +305,266 @@
                 <label class="sym"><input type="checkbox" value="swelling"> 🦵 swelling</label>
                 <label class="sym"><input type="checkbox" value="cramps"> ⚡ cramps</label>
                 <label class="sym"><input type="checkbox" value="braxton"> 💫 braxton hicks</label>
-                <label class="sym"><input type="checkbox" value="kicks"> 👟 baby kicks</label>
+                <label class="sym"><input type="checkbox" value="kicks"> 👟 baby kicks! 🎉</label>
                 <label class="sym"><input type="checkbox" value="insomnia"> 🌙 insomnia</label>
                 <label class="sym"><input type="checkbox" value="mood"> 🌈 mood swings</label>
                 <label class="sym"><input type="checkbox" value="spotting"> 🩸 spotting</label>
                 <label class="sym"><input type="checkbox" value="dizzy"> 💫 dizziness</label>
                 <label class="sym"><input type="checkbox" value="cravings"> 🍕 cravings</label>
                 <label class="sym"><input type="checkbox" value="congestion"> 🤧 congestion</label>
+                <label class="sym"><input type="checkbox" value="bloating"> 🎈 bloating</label>
+                <label class="sym"><input type="checkbox" value="tender"> 🤲 breast tenderness</label>
             </div>
-            <textarea id="symptomNotes" placeholder="any extra notes? ✍️" rows="2"></textarea>
+            <textarea id="symptomNotes" placeholder="any extra notes? describe how you're feeling… ✍️" rows="3"></textarea>
             <div class="sym-history" id="symptomHistory"></div>
         </div>
-        <div class="card">
-            <h3>weight tracker ⚖️</h3>
+
+        <!-- weight tracker -->
+        <div class="health-panel">
+            <div class="hp-header">
+                <h3>weight tracker ⚖️</h3>
+            </div>
+            <p class="hp-desc">recommended pregnancy weight gain varies by starting BMI. track your progress and share with your provider.</p>
+            <div class="weight-rec-row">
+                <div class="wrec-item"><span class="wrec-val">11–16 kg</span><span class="wrec-label">normal BMI</span></div>
+                <div class="wrec-item"><span class="wrec-val">13–18 kg</span><span class="wrec-label">underweight</span></div>
+                <div class="wrec-item"><span class="wrec-val">7–11 kg</span><span class="wrec-label">overweight</span></div>
+            </div>
             <div class="inline-form three-col">
                 <input type="date" id="weightDate">
-                <input type="number" id="weightValue" placeholder="lbs" step="0.1" min="50" max="400">
-                <button class="btn-primary" onclick="logWeight()">add</button>
+                <input type="number" id="weightValue" placeholder="weight (lbs)" step="0.1" min="50" max="400">
+                <button class="btn-primary btn-sm" onclick="logWeight()">add</button>
             </div>
             <div class="chart-wrap" style="display:none"><canvas id="weightChart"></canvas></div>
             <div class="weight-history" id="weightHistory"></div>
-        </div>
-    </div>
-</section>
 
-<!-- ═══════════════════ APPOINTMENTS ═══════════════════ -->
-<section id="appointments" class="section">
-    <div class="section-header">
-        <div class="section-tag">📆 appointments</div>
-        <h2>doctor visits</h2>
-    </div>
-    <div class="card appt-form">
-        <h3>add appointment ➕</h3>
-        <div class="form-row">
-            <div class="form-group"><label>date</label><input type="date" id="apptDate"></div>
-            <div class="form-group"><label>time</label><input type="time" id="apptTime"></div>
-        </div>
-        <div class="form-row">
-            <div class="form-group"><label>doctor / provider</label><input type="text" id="apptDoctor" placeholder="Dr. Smith"></div>
-            <div class="form-group">
-                <label>type</label>
-                <select id="apptType">
-                    <option value="">select type…</option>
-                    <option>Regular Checkup</option>
-                    <option>Ultrasound 🖥️</option>
-                    <option>Blood Work 🩸</option>
-                    <option>Glucose Test (24–28 wk)</option>
-                    <option>GBS Test (35–36 wk)</option>
-                    <option>Non-Stress Test</option>
-                    <option>Anatomy Scan (18–20 wk)</option>
-                    <option>Other</option>
-                </select>
+            <div class="health-tip-box">
+                <div class="htb-icon">💡</div>
+                <div>
+                    <strong>when to call your doctor</strong>
+                    <p>sudden weight gain of more than 1 kg in a week, especially with swelling, can be a sign of preeclampsia. always mention rapid changes to your provider.</p>
+                </div>
             </div>
         </div>
-        <div class="form-group"><label>notes / questions to ask</label><textarea id="apptNotes" rows="2" placeholder="write down questions so you don't forget 📝"></textarea></div>
-        <button class="btn-primary" onclick="addAppointment()">add appointment ✨</button>
     </div>
-    <div class="appt-list" id="appointmentsList"></div>
 </section>
 
-<!-- ═══════════════════ CHECKLISTS ═══════════════════ -->
+<!-- ══════════════ APPOINTMENTS ══════════════ -->
+<section id="appointments" class="section">
+    <div class="section-header">
+        <div class="sh-left">
+            <div class="section-tag">📆 appointments</div>
+            <h2>doctor <span class="grad-text">visits</span></h2>
+            <p class="section-desc">never miss an important prenatal appointment. add all your visits, tests, and scans in one place.</p>
+        </div>
+    </div>
+
+    <div class="appt-layout">
+        <div class="appt-form-panel">
+            <h3>add new appointment ➕</h3>
+            <div class="form-row">
+                <div class="form-group"><label>date</label><input type="date" id="apptDate"></div>
+                <div class="form-group"><label>time</label><input type="time" id="apptTime"></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group"><label>doctor / provider</label><input type="text" id="apptDoctor" placeholder="Dr. Smith"></div>
+                <div class="form-group">
+                    <label>type of visit</label>
+                    <select id="apptType">
+                        <option value="">select type…</option>
+                        <option>Regular Checkup</option>
+                        <option>Ultrasound 🖥️</option>
+                        <option>Blood Work 🩸</option>
+                        <option>Glucose Test (24–28 wk)</option>
+                        <option>GBS Test (35–36 wk)</option>
+                        <option>Non-Stress Test</option>
+                        <option>Anatomy Scan (18–20 wk)</option>
+                        <option>Genetic Counselling</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group"><label>notes / questions to ask your doctor</label>
+                <textarea id="apptNotes" rows="3" placeholder="write your questions here so you don't forget them at the appointment 📝"></textarea>
+            </div>
+            <button class="btn-primary btn-full" onclick="addAppointment()">add appointment ✨</button>
+
+            <div class="appt-tip-box">
+                <strong>💡 recommended appointments</strong>
+                <ul class="appt-tip-list">
+                    <li>8–10 weeks — first prenatal visit</li>
+                    <li>11–14 weeks — nuchal translucency scan</li>
+                    <li>18–20 weeks — anatomy scan</li>
+                    <li>24–28 weeks — glucose test</li>
+                    <li>35–36 weeks — GBS test</li>
+                    <li>36+ weeks — weekly visits</li>
+                </ul>
+            </div>
+        </div>
+        <div class="appt-list-panel">
+            <h3>your appointments</h3>
+            <div class="appt-list" id="appointmentsList"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ CHECKLISTS ══════════════ -->
 <section id="checklists" class="section">
     <div class="section-header">
-        <div class="section-tag">✅ checklists</div>
-        <h2>get prepared</h2>
+        <div class="sh-left">
+            <div class="section-tag">✅ checklists</div>
+            <h2>get <span class="grad-text">prepared</span></h2>
+            <p class="section-desc">everything you need to pack, buy, plan, and organise before baby arrives. tick things off as you go.</p>
+        </div>
     </div>
+
     <div class="tab-bar">
         <button class="tab-btn active" onclick="showChecklist('hospital',this)">🏥 hospital bag</button>
-        <button class="tab-btn" onclick="showChecklist('nursery',this)">🍼 nursery</button>
+        <button class="tab-btn" onclick="showChecklist('nursery',this)">🍼 nursery setup</button>
         <button class="tab-btn" onclick="showChecklist('birthplan',this)">📋 birth plan</button>
         <button class="tab-btn" onclick="showChecklist('firstmonth',this)">🧸 first month</button>
     </div>
-    <div class="card">
-        <div class="checklist-header">
-            <h3 id="checklistTitle"></h3>
-            <button class="btn-ghost-sm" onclick="resetChecklist()">reset all</button>
+
+    <div class="checklist-layout">
+        <div class="cl-main">
+            <div class="cl-header">
+                <h3 id="checklistTitle"></h3>
+                <button class="btn-ghost-sm" onclick="resetChecklist()">reset all</button>
+            </div>
+            <div id="checklistContent"></div>
         </div>
-        <div id="checklistContent"></div>
+        <div class="cl-sidebar">
+            <div class="cls-progress-card">
+                <div class="clsp-label">overall progress</div>
+                <div class="clsp-pct" id="clProgressPct">0%</div>
+                <div class="mini-bar"><div class="mini-fill" id="clProgressBar"></div></div>
+                <div class="clsp-count" id="clProgressCount">0 of 0 items</div>
+            </div>
+            <div class="cls-tip-card">
+                <div class="clt-icon">💡</div>
+                <strong>pro tip</strong>
+                <p>pack your hospital bag by week 36 — babies don't always wait for week 40! keep it by the front door so you can grab it and go.</p>
+            </div>
+            <div class="cls-tip-card">
+                <div class="clt-icon">🚗</div>
+                <strong>car seat reminder</strong>
+                <p>install your car seat by week 34 and have it inspected by a certified technician — many fire stations offer this for free.</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- ═══════════════════ NUTRITION ═══════════════════ -->
+<!-- ══════════════ NUTRITION ══════════════ -->
 <section id="nutrition" class="section">
     <div class="section-header">
-        <div class="section-tag">🍎 nutrition</div>
-        <h2>eat well, mama 🫶</h2>
+        <div class="sh-left">
+            <div class="section-tag">🍎 nutrition guide</div>
+            <h2>eat well, <span class="grad-text">mama 🫶</span></h2>
+            <p class="section-desc">a complete guide to safe and beneficial foods during pregnancy — and what to avoid to keep you and baby healthy.</p>
+        </div>
+        <div class="sh-right">
+            <input type="text" id="nutritionSearch" class="search-input" placeholder="🔍 search any food…" oninput="filterNutrition()">
+        </div>
     </div>
-    <div class="card nutrition-search-card">
-        <input type="text" id="nutritionSearch" placeholder="🔍 search any food…" oninput="filterNutrition()">
+
+    <div class="nutrition-stats">
+        <div class="ns-item"><span class="ns-num">+300</span><span class="ns-label">extra calories/day in 2nd–3rd trimester</span></div>
+        <div class="ns-item"><span class="ns-num">27mg</span><span class="ns-label">iron needed daily</span></div>
+        <div class="ns-item"><span class="ns-num">1000mg</span><span class="ns-label">calcium needed daily</span></div>
+        <div class="ns-item"><span class="ns-num">600mcg</span><span class="ns-label">folic acid (1st trimester)</span></div>
+        <div class="ns-item"><span class="ns-num">&lt;200mg</span><span class="ns-label">max caffeine per day</span></div>
     </div>
+
     <div class="nutrition-cols">
-        <div class="card nutrition-card safe-card">
-            <h3>✅ safe &amp; recommended</h3>
+        <div class="nutrition-card safe-card">
+            <div class="nc-header"><h3>✅ safe &amp; recommended</h3><span class="nc-count safe-count" id="safeCount"></span></div>
             <div id="safeList" class="food-list"></div>
         </div>
-        <div class="card nutrition-card avoid-card">
-            <h3>⚠️ avoid or limit</h3>
+        <div class="nutrition-card avoid-card">
+            <div class="nc-header"><h3>⚠️ avoid or limit</h3><span class="nc-count avoid-count" id="avoidCount"></span></div>
             <div id="avoidList" class="food-list"></div>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════════ AI CHAT ═══════════════════ -->
+<!-- ══════════════ AI CHAT ══════════════ -->
 <section id="chat" class="section">
     <div class="section-header">
-        <div class="section-tag">🤖 ai assistant</div>
-        <h2>ask luna anything</h2>
-    </div>
-    <div class="card api-setup" id="apiSetup">
-        <div class="api-icon">🔑</div>
-        <h3>connect your ai</h3>
-        <p>enter your free anthropic api key. stored only in your browser — never shared.</p>
-        <p class="api-hint">get a free key at <strong>console.anthropic.com</strong> → api keys</p>
-        <div class="inline-form">
-            <input type="password" id="apiKeyInput" placeholder="sk-ant-…">
-            <button class="btn-primary" onclick="saveApiKey()">connect ✨</button>
+        <div class="sh-left">
+            <div class="section-tag">🤖 ai assistant</div>
+            <h2>ask <span class="grad-text">luna</span> anything</h2>
+            <p class="section-desc">luna is your 24/7 pregnancy AI — powered by Claude. ask about symptoms, nutrition, what to expect, or anything on your mind.</p>
         </div>
-        <button class="btn-ghost" onclick="skipApiSetup()" style="margin-top:.5rem">skip for now</button>
-    </div>
-    <div class="card chat-wrapper" id="chatWrapper" style="display:none;padding:0;overflow:hidden">
-        <div class="chat-topbar">
-            <div class="chat-ai-info">
-                <div class="ai-avatar">🤖</div>
+        <div class="sh-right">
+            <div class="luna-badge">
+                <div class="lb-avatar">🤖</div>
                 <div>
-                    <div class="ai-name">Luna AI</div>
-                    <div class="ai-status" id="apiKeyStatus">🟢 connected</div>
+                    <div class="lb-name">Luna AI</div>
+                    <div class="lb-sub">powered by Claude (Anthropic)</div>
                 </div>
             </div>
-            <button class="btn-ghost-sm" onclick="clearApiKey()">change key</button>
         </div>
-        <div class="chat-messages" id="chatMessages">
-            <div class="msg bot-msg">
-                <div class="msg-bubble">hey girl! 👋 i'm Luna, your pregnancy bestie powered by AI. ask me anything — symptoms, cravings, what to expect week by week, or just need someone to talk to. i got you! 🤰✨</div>
+    </div>
+
+    <div class="chat-layout">
+        <div class="chat-sidebar">
+            <div class="cs-card">
+                <h4>suggested questions 💬</h4>
+                <div class="suggest-list">
+                    <button class="suggest-btn" onclick="fillChat('What symptoms are normal in the first trimester?')">What symptoms are normal in the first trimester?</button>
+                    <button class="suggest-btn" onclick="fillChat('Is it safe to exercise during pregnancy?')">Is it safe to exercise during pregnancy?</button>
+                    <button class="suggest-btn" onclick="fillChat('What foods should I avoid during pregnancy?')">What foods should I avoid?</button>
+                    <button class="suggest-btn" onclick="fillChat('How do I know if I am in labor?')">How do I know if I'm in labor?</button>
+                    <button class="suggest-btn" onclick="fillChat('What is the glucose test and how do I prepare?')">What is the glucose test?</button>
+                    <button class="suggest-btn" onclick="fillChat('How can my partner support me during pregnancy?')">How can my partner support me?</button>
+                    <button class="suggest-btn" onclick="fillChat('What are Braxton Hicks contractions?')">What are Braxton Hicks?</button>
+                    <button class="suggest-btn" onclick="fillChat('When should I go to the hospital during labor?')">When to go to the hospital?</button>
+                </div>
+            </div>
+            <div class="cs-card cs-disclaimer">
+                <div class="csd-icon">⚠️</div>
+                <strong>important</strong>
+                <p>luna provides general information only. always consult your healthcare provider for personal medical decisions. in an emergency, call 911.</p>
             </div>
         </div>
-        <div class="chat-input-row">
-            <input type="text" id="chatInput" placeholder="ask luna anything… 💬" onkeydown="handleChatKey(event)">
-            <button class="btn-primary send-btn" onclick="sendChat()">↑</button>
+
+        <div class="chat-main">
+            <!-- API setup -->
+            <div class="api-setup-panel" id="apiSetup">
+                <div class="asp-icon">🔑</div>
+                <h3>connect luna ai</h3>
+                <p>enter your free anthropic api key to unlock luna. your key is stored only in your browser — never shared with anyone.</p>
+                <p class="api-hint">get a free key at <strong>console.anthropic.com</strong> → api keys</p>
+                <div class="inline-form">
+                    <input type="password" id="apiKeyInput" placeholder="sk-ant-…">
+                    <button class="btn-primary" onclick="saveApiKey()">connect ✨</button>
+                </div>
+                <button class="btn-ghost" onclick="skipApiSetup()" style="margin-top:.5rem;width:100%">skip for now</button>
+            </div>
+
+            <!-- chat UI -->
+            <div class="chat-ui" id="chatWrapper" style="display:none">
+                <div class="chat-topbar">
+                    <div class="chat-ai-info">
+                        <div class="ai-avatar">🤖</div>
+                        <div>
+                            <div class="ai-name">Luna AI</div>
+                            <div class="ai-status" id="apiKeyStatus">🟢 connected</div>
+                        </div>
+                    </div>
+                    <button class="btn-ghost-sm" onclick="clearApiKey()">change key</button>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="msg bot-msg">
+                        <div class="msg-bubble">hey girl! 👋 i'm Luna, your pregnancy bestie powered by AI. ask me anything — symptoms, cravings, what to expect week by week, or just need someone to talk to. i got you! 🤰✨</div>
+                    </div>
+                </div>
+                <div class="chat-input-row">
+                    <input type="text" id="chatInput" placeholder="ask luna anything… 💬" onkeydown="handleChatKey(event)">
+                    <button class="btn-primary send-btn" onclick="sendChat()">↑</button>
+                </div>
+            </div>
         </div>
-        <p class="disclaimer">⚠️ general info only — always check with your healthcare provider for medical advice.</p>
     </div>
 </section>
 
