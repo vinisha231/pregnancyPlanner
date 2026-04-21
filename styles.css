@@ -222,3 +222,38 @@ body::before {
 .hero-stat:hover { border-color: var(--card-hover); box-shadow: var(--glow-soft); transform: translateY(-3px); }
 .hero-stat-num { display: block; font-size: 2.5rem; font-weight: 900; background: var(--grad-text); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .hero-stat-label { font-size: .78rem; color: var(--muted); font-weight: 600; margin-top: .2rem; }
+
+/* ── SETUP SECTION ── */
+.setup-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    padding: 3rem 0 4rem;
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+.setup-badge {
+    display: inline-block;
+    background: var(--pink-dim);
+    border: 1px solid rgba(255,45,120,.3);
+    border-radius: var(--radius-pill);
+    padding: .25rem .85rem;
+    font-size: .72rem;
+    font-weight: 800;
+    color: var(--pink-bright);
+    margin-bottom: .75rem;
+}
+.setup-title { font-size: 2.6rem; font-weight: 900; line-height: 1.1; margin-bottom: .75rem; }
+.setup-desc { font-size: .92rem; color: var(--muted); max-width: 420px; margin-bottom: 1.5rem; }
+.setup-features { display: flex; flex-direction: column; gap: .5rem; }
+.sf-item { display: flex; align-items: center; gap: .65rem; font-size: .88rem; color: var(--text-soft); font-weight: 500; }
+.sf-item span { flex: 1; }
+
+.setup-form-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow);
+}
