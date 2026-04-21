@@ -303,3 +303,23 @@ body::before {
 .st-big   { font-size: 2.8rem; font-weight: 900; line-height: 1; color: var(--text); }
 .st-date  { font-size: 1.4rem; }
 .st-sub   { font-size: .75rem; color: var(--muted); margin-top: .3rem; }
+
+/* ── PROGRESS BAR ── */
+.progress-full {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(12px);
+}
+.pf-top { display:flex; justify-content:space-between; align-items:center; margin-bottom: .6rem; }
+.pf-title { font-size: .85rem; font-weight: 800; color: var(--text-soft); text-transform: lowercase; }
+.pf-pct { font-size: 1.2rem; font-weight: 900; background: var(--grad-text); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.pf-track { background: rgba(255,45,120,.1); border-radius: var(--radius-pill); height:12px; overflow:hidden; border:1px solid rgba(255,45,120,.15); }
+.pf-fill  { height:100%; background: var(--grad); border-radius: var(--radius-pill); width:0%; transition:width .9s cubic-bezier(.4,0,.2,1); box-shadow: 0 0 16px var(--pink-glow); }
+.pf-labels { display:flex; justify-content:space-between; margin-top: .75rem; flex-wrap:wrap; gap:.4rem; }
+.pf-tri { font-size: .72rem; font-weight: 700; padding:.2rem .7rem; border-radius:var(--radius-pill); }
+.t1 { background:rgba(255,45,120,.12); color:var(--pink-bright); border:1px solid rgba(255,45,120,.2); }
+.t2 { background:rgba(155,89,182,.12); color:#C980FF; border:1px solid rgba(155,89,182,.2); }
+.t3 { background:rgba(0,229,176,.1); color:var(--mint); border:1px solid rgba(0,229,176,.2); }
