@@ -719,10 +719,11 @@ function saveApiKey() {
 }
 
 function skipApiSetup() {
-    document.getElementById('apiSetup').style.display  = 'none';
-    document.getElementById('chatWrapper').style.display = 'block';
-    document.getElementById('apiKeyBar').style.display  = 'none';
-    document.getElementById('apiKeyStatus').textContent = '⚪ No AI key — responses disabled';
+    const setup = document.getElementById('apiSetup');
+    const wrap  = document.getElementById('chatWrapper');
+    if (setup) setup.style.display = 'none';
+    if (wrap)  wrap.style.display  = 'flex';
+    setText('apiKeyStatus', '⚪ no key — limited mode');
 }
 
 function showChatUI(key) {
