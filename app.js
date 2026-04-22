@@ -154,7 +154,6 @@ function resetSetup() {
     saveToStorage();
     document.getElementById('setupCard').style.display     = 'block';
     document.getElementById('dashboardGrid').style.display = 'none';
-    document.getElementById('resetArea').style.display     = 'none';
 }
 
 function getCurrentWeek() {
@@ -208,7 +207,6 @@ function showDashboard() {
 
     document.getElementById('setupCard').style.display     = 'none';
     document.getElementById('dashboardGrid').style.display = 'grid';
-    document.getElementById('resetArea').style.display     = 'block';
 
     renderWeeklyData();
 }
