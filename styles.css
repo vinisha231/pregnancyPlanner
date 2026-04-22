@@ -721,3 +721,24 @@ img { max-width:100%; }
 .lb-sub { font-size:.72rem; color:var(--pink-bright); }
 .luna-badge { display:flex; align-items:center; gap:.75rem; padding:.85rem 1.25rem; background:var(--pink-dim); border:1px solid rgba(255,45,120,.25); border-radius:var(--radius); }
 .send-btn { border-radius:50%; width:42px; height:42px; padding:0; font-size:1.1rem; flex-shrink:0; }
+
+/* ── WEEK SIDEBAR + CHIP ── */
+.weekly-sidebar .ws-week-info { margin-top:1rem; text-align:center; }
+.wsi-week { font-size:1.1rem; font-weight:900; color:var(--text); margin-bottom:.5rem; }
+.wsi-chips { display:flex; gap:.4rem; justify-content:center; flex-wrap:wrap; }
+.chip { padding:.25rem .8rem; border-radius:var(--radius-pill); font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.4px; }
+.pink-chip { background:var(--pink-dim); color:var(--pink-bright); border:1px solid rgba(255,45,120,.25); }
+.wr-nav-card { background:rgba(255,255,255,.02); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.25rem; }
+
+/* ── SEARCH INPUT (section header) ── */
+.search-input { padding:.65rem 1rem; border-radius:var(--radius-pill); border:1px solid var(--card-border); background:rgba(255,255,255,.05); color:var(--text); font-size:.84rem; font-family:inherit; outline:none; min-width:220px; transition:all .2s; }
+.search-input:focus { border-color:var(--pink); box-shadow:0 0 0 3px var(--pink-dim); }
+
+/* ── TOGGLE INSIDE SETUP ── */
+.toggle-label { display:flex; align-items:center; gap:.75rem; cursor:pointer; font-size:.86rem; font-weight:600; color:var(--text-soft); }
+.toggle-track { position:relative; width:44px; height:24px; background:rgba(255,255,255,.12); border-radius:var(--radius-pill); transition:.3s; flex-shrink:0; }
+.toggle-track:has(input:checked), input[type=checkbox]:checked ~ .toggle-track { background:var(--pink); }
+.toggle-thumb { position:absolute; left:3px; top:3px; width:18px; height:18px; background:#fff; border-radius:50%; transition:.3s; }
+input[type=checkbox]:checked + .toggle-track .toggle-thumb { transform:translateX(20px); }
+.opt { color:var(--muted); font-weight:500; font-size:.78rem; margin-left:.2rem; }
+.partner-fields { padding-top:.25rem; }
