@@ -669,3 +669,10 @@ img { max-width:100%; }
 .cb-left { }
 .cb-names { font-size:1.5rem; font-weight:900; background:var(--grad-text); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .cb-due { font-size:.82rem; color:var(--muted); margin-top:.2rem; font-weight:600; }
+
+/* ── WEEK JUMP GRID ── */
+.wrn-label { font-size:.72rem; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; margin-bottom:.75rem; }
+.wrn-grid { display:grid; grid-template-columns:repeat(8,1fr); gap:.35rem; }
+.wj-btn { background:rgba(255,255,255,.04); border:1px solid var(--card-border); border-radius:6px; color:var(--muted); font-size:.73rem; font-weight:700; font-family:inherit; cursor:pointer; padding:.35rem .2rem; transition:all .15s; }
+.wj-btn:hover { background:var(--pink-dim); border-color:var(--pink); color:var(--text); }
+.wj-btn.active { background:var(--pink); border-color:var(--pink); color:#fff; box-shadow:0 0 8px var(--pink-glow); }
