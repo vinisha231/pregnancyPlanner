@@ -237,6 +237,25 @@ function renderWeeklyData() {
     setText('babyDevelopment', data.baby);
     setText('momSymptoms',     data.mom);
     setText('weekTip',         data.tip);
+
+    // Update trimester chip in sidebar
+    const tri = w <= 13 ? '1st Trimester' : w <= 26 ? '2nd Trimester' : '3rd Trimester';
+    setText('trimChip', tri);
+
+    // Build week jump grid (1–40)
+    const grid = document.getElementById('weekJumpGrid');
+    if (grid && !grid.dataset.built) {
+        let html = '';
+        for (let i = 1; i <= 40; i++) {
+            html += `<button class="wj-btn${i === w ? ' active' : ''}" onclick="jumpToWeek(${i})">${i}</button>`;
+        }
+        grid.innerHTML = html;
+        grid.dataset.built = 'yes';
+    } else if (grid) {
+        grid.querySelectorAll('.wj-btn').forEach((btn, idx) => {
+            btn.classList.toggle('active', idx + 1 === w);
+        });
+    }
 }
 
 // ── HEALTH — SYMPTOMS ──────────────────────────────────────────────
