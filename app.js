@@ -737,16 +737,21 @@ function skipApiSetup() {
 }
 
 function showChatUI(key) {
-    document.getElementById('apiSetup').style.display    = 'none';
-    document.getElementById('chatWrapper').style.display = 'block';
-    document.getElementById('apiKeyStatus').textContent  = '🟢 AI connected';
+    const setup = document.getElementById('apiSetup');
+    const wrap  = document.getElementById('chatWrapper');
+    if (setup) setup.style.display = 'none';
+    if (wrap)  wrap.style.display  = 'flex';
+    setText('apiKeyStatus', '🟢 AI connected');
 }
 
 function clearApiKey() {
     localStorage.removeItem('mp_api_key');
-    document.getElementById('apiSetup').style.display    = 'block';
-    document.getElementById('chatWrapper').style.display = 'none';
-    document.getElementById('apiKeyInput').value = '';
+    const setup = document.getElementById('apiSetup');
+    const wrap  = document.getElementById('chatWrapper');
+    if (setup) setup.style.display = 'flex';
+    if (wrap)  wrap.style.display  = 'none';
+    const keyInput = document.getElementById('apiKeyInput');
+    if (keyInput) keyInput.value = '';
 }
 
 async function sendChat() {
