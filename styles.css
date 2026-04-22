@@ -586,3 +586,16 @@ body::before {
 .weight-entry .wt-date { color:var(--muted); font-size:.75rem; }
 .weight-del { background:none; border:none; color:var(--muted); cursor:pointer; font-size:.9rem; padding:.2rem .4rem; border-radius:4px; transition:.15s; }
 .weight-del:hover { color:var(--coral); background:rgba(255,107,107,.1); }
+
+/* ── BADGE + TAG UTILITIES ── */
+.badge { display:inline-flex; align-items:center; gap:.3rem; padding:.25rem .65rem; border-radius:var(--radius-pill); font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.4px; }
+.badge-pink { background:var(--pink-dim); color:var(--pink-bright); border:1px solid rgba(255,45,120,.25); }
+.badge-mint { background:rgba(0,229,176,.08); color:var(--mint); border:1px solid rgba(0,229,176,.2); }
+.badge-coral { background:rgba(255,107,107,.08); color:var(--coral); border:1px solid rgba(255,107,107,.2); }
+.badge-yellow { background:rgba(255,217,61,.08); color:var(--yellow); border:1px solid rgba(255,217,61,.2); }
+.divider { height:1px; background:rgba(255,255,255,.06); margin:1.25rem 0; }
+.text-muted { color:var(--muted); }
+.text-pink { color:var(--pink); }
+.text-sm { font-size:.8rem; }
+.mt-1 { margin-top:.5rem; }
+.mt-2 { margin-top:1rem; }
