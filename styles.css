@@ -656,3 +656,16 @@ img { max-width:100%; }
 .btn-ghost-sm:hover { color:var(--text); border-color:var(--card-border); }
 .btn-link { background:none; border:none; color:var(--pink-bright); font-size:.82rem; font-weight:700; font-family:inherit; cursor:pointer; padding:.3rem 0; text-decoration:none; transition:color .2s; }
 .btn-link:hover { color:var(--pink); }
+
+/* ── SETUP 2-COL + FORM UTILITY ── */
+.setup-inner { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; }
+.setup-right { display:flex; justify-content:center; }
+.setup-left { }
+.or-divider { display:flex; align-items:center; gap:1rem; color:var(--muted); font-size:.78rem; font-weight:700; margin:.4rem 0; }
+.or-divider::before, .or-divider::after { content:''; flex:1; height:1px; background:rgba(255,255,255,.08); }
+.inline-form { display:flex; gap:.6rem; align-items:center; }
+.inline-form.three-col { display:grid; grid-template-columns:1fr 1fr auto; }
+.couple-banner { display:flex; justify-content:space-between; align-items:center; padding:1.25rem 1.75rem; background:var(--pink-dim); border:1px solid rgba(255,45,120,.22); border-radius:var(--radius); margin-bottom:1.5rem; }
+.cb-left { }
+.cb-names { font-size:1.5rem; font-weight:900; background:var(--grad-text); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.cb-due { font-size:.82rem; color:var(--muted); margin-top:.2rem; font-weight:600; }
