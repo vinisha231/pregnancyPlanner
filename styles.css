@@ -722,6 +722,16 @@ img { max-width:100%; }
 .luna-badge { display:flex; align-items:center; gap:.75rem; padding:.85rem 1.25rem; background:var(--pink-dim); border:1px solid rgba(255,45,120,.25); border-radius:var(--radius); }
 .send-btn { border-radius:50%; width:42px; height:42px; padding:0; font-size:1.1rem; flex-shrink:0; }
 
+/* ── CHAT MESSAGE BUBBLES (app.js injects .msg / .user-msg / .bot-msg) ── */
+.msg { display:flex; margin-bottom:.25rem; }
+.user-msg { justify-content:flex-end; }
+.bot-msg  { justify-content:flex-start; }
+.msg-bubble { max-width:72%; padding:.85rem 1.1rem; border-radius:18px; font-size:.86rem; line-height:1.6; word-wrap:break-word; }
+.user-msg .msg-bubble { background:var(--grad); color:#fff; border-bottom-right-radius:4px; box-shadow:var(--glow-soft); }
+.bot-msg  .msg-bubble { background:rgba(255,255,255,.06); color:var(--text-soft); border-bottom-left-radius:4px; border:1px solid var(--card-border); }
+.typing .msg-bubble { display:flex; gap:5px; align-items:center; min-width:52px; }
+.typing .msg-bubble::after { content:'● ● ●'; color:var(--pink); font-size:.5rem; letter-spacing:3px; animation:typingDot .9s infinite; }
+
 /* ── WEEK SIDEBAR + CHIP ── */
 .weekly-sidebar .ws-week-info { margin-top:1rem; text-align:center; }
 .wsi-week { font-size:1.1rem; font-weight:900; color:var(--text); margin-bottom:.5rem; }
