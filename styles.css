@@ -614,3 +614,19 @@ body::before {
     .chat-sidebar { display:none; }
     .nut-stats { grid-template-columns:repeat(2,1fr); }
 }
+
+/* ── RESPONSIVE — MOBILE (≤ 640px) ── */
+@media (max-width:640px) {
+    .nav-links { display:none; }
+    .section { padding:2rem 1rem; }
+    .hero-title { font-size:2.6rem; }
+    .hero-tagline { font-size:1rem; }
+    .setup-inner { grid-template-columns:1fr; }
+    .dash-stats { grid-template-columns:repeat(2,1fr); }
+    .dash-bottom { grid-template-columns:1fr; }
+    .nut-stats { grid-template-columns:1fr 1fr; }
+    .chat-layout { grid-template-columns:1fr; }
+    .hero-ctas { flex-direction:column; align-items:flex-start; }
+    .week-jump-grid { grid-template-columns:repeat(6,1fr); }
+    .chat-messages { height:340px; }
+}
