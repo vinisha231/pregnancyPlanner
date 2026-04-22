@@ -358,11 +358,13 @@ function renderWeightChart() {
             datasets: [{
                 label: 'Weight (lbs)',
                 data: state.weights.map(w => w.value),
-                borderColor: '#E8A0BF',
-                backgroundColor: 'rgba(232,160,191,.15)',
-                borderWidth: 2,
-                pointBackgroundColor: '#BA90C6',
-                tension: .35,
+                borderColor: '#FF2D78',
+                backgroundColor: 'rgba(255,45,120,.12)',
+                borderWidth: 2.5,
+                pointBackgroundColor: '#FF5FA0',
+                pointBorderColor: '#FF2D78',
+                pointRadius: 5,
+                tension: .4,
                 fill: true,
             }]
         },
@@ -371,8 +373,16 @@ function renderWeightChart() {
             maintainAspectRatio: false,
             plugins: { legend: { display: false } },
             scales: {
-                y: { ticks: { font: { size: 11 } }, grid: { color: '#F0D6E8' } },
-                x: { ticks: { font: { size: 10 }, maxTicksLimit: 6 }, grid: { display: false } },
+                y: {
+                    ticks: { color: 'rgba(255,255,255,.5)', font: { size: 11 } },
+                    grid: { color: 'rgba(255,255,255,.06)' },
+                    border: { color: 'rgba(255,255,255,.1)' },
+                },
+                x: {
+                    ticks: { color: 'rgba(255,255,255,.5)', font: { size: 10 }, maxTicksLimit: 6 },
+                    grid: { display: false },
+                    border: { color: 'rgba(255,255,255,.1)' },
+                },
             }
         }
     });
