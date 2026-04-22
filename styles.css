@@ -545,3 +545,14 @@ body::before {
 .api-note { font-size:.72rem; color:var(--muted); margin-top:.5rem; }
 .api-note a { color:var(--pink-bright); text-decoration:none; }
 .api-note a:hover { text-decoration:underline; }
+
+/* ── PARTNER TOGGLE ── */
+.partner-toggle-row { display:flex; align-items:center; gap:.75rem; margin-bottom:1rem; padding:.85rem 1rem; background:var(--pink-dim); border-radius:var(--radius-sm); border:1px solid rgba(255,45,120,.18); cursor:pointer; }
+.toggle-switch { position:relative; width:44px; height:24px; flex-shrink:0; }
+.toggle-switch input { opacity:0; width:0; height:0; }
+.toggle-slider { position:absolute; inset:0; background:rgba(255,255,255,.12); border-radius:var(--radius-pill); transition:.3s; }
+.toggle-slider:before { content:''; position:absolute; left:3px; top:3px; width:18px; height:18px; background:#fff; border-radius:50%; transition:.3s; }
+.toggle-switch input:checked + .toggle-slider { background:var(--pink); box-shadow:0 0 12px var(--pink-glow); }
+.toggle-switch input:checked + .toggle-slider:before { transform:translateX(20px); }
+.partner-toggle-label { font-size:.86rem; font-weight:700; color:var(--text-soft); }
+#partnerFields { padding-top:.5rem; }
