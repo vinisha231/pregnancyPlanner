@@ -219,6 +219,11 @@ function changeWeek(delta) {
     renderWeeklyData();
 }
 
+function jumpToWeek(w) {
+    state.selectedWeek = Math.max(1, Math.min(40, w));
+    renderWeeklyData();
+}
+
 function jumpToCurrentWeek() {
     state.selectedWeek = state.currentWeek || getCurrentWeek();
     renderWeeklyData();
