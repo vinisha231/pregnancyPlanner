@@ -599,3 +599,18 @@ body::before {
 .text-sm { font-size:.8rem; }
 .mt-1 { margin-top:.5rem; }
 .mt-2 { margin-top:1rem; }
+
+/* ── RESPONSIVE — TABLET (≤ 1024px) ── */
+@media (max-width:1024px) {
+    .hero-inner { grid-template-columns:1fr; }
+    .hero-stat-grid { grid-template-columns:repeat(2,1fr); }
+    .weekly-layout { grid-template-columns:1fr; }
+    .weekly-sidebar, .weekly-tip-panel { display:none; }
+    .health-layout { grid-template-columns:1fr; }
+    .appt-layout { grid-template-columns:1fr; }
+    .checklist-layout { grid-template-columns:1fr; }
+    .nut-cols { grid-template-columns:1fr; }
+    .chat-layout { grid-template-columns:1fr; height:auto; }
+    .chat-sidebar { display:none; }
+    .nut-stats { grid-template-columns:repeat(2,1fr); }
+}
