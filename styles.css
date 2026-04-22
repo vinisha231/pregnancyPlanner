@@ -537,3 +537,11 @@ body::before {
 .form-select option { background:#1a0a20; color:var(--text); }
 .form-textarea { resize:vertical; min-height:80px; }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; }
+
+/* ── API KEY SETUP ── */
+.api-setup { background:var(--pink-dim); border:1px solid rgba(255,45,120,.25); border-radius:var(--radius); padding:1.25rem 1.5rem; margin-bottom:1rem; display:flex; align-items:center; gap:1rem; }
+.api-setup input { flex:1; padding:.6rem .9rem; border-radius:var(--radius-sm); border:1px solid rgba(255,45,120,.3); background:rgba(255,255,255,.07); color:var(--text); font-size:.83rem; font-family:inherit; outline:none; }
+.api-setup input:focus { border-color:var(--pink); }
+.api-note { font-size:.72rem; color:var(--muted); margin-top:.5rem; }
+.api-note a { color:var(--pink-bright); text-decoration:none; }
+.api-note a:hover { text-decoration:underline; }
