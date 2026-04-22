@@ -703,3 +703,21 @@ img { max-width:100%; }
 .csd-icon { font-size:1.4rem; margin-bottom:.4rem; }
 .cs-disclaimer strong { font-size:.82rem; color:var(--yellow); font-weight:800; display:block; margin-bottom:.4rem; }
 .cs-disclaimer p { font-size:.75rem; color:var(--muted); line-height:1.45; }
+
+/* ── CHAT MAIN UI CLASSES ── */
+.api-setup-panel { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:3rem 2rem; text-align:center; height:100%; }
+.asp-icon { font-size:3rem; margin-bottom:1rem; }
+.api-setup-panel h3 { font-size:1.2rem; font-weight:900; color:var(--text); margin-bottom:.5rem; }
+.api-setup-panel p { font-size:.84rem; color:var(--text-soft); margin-bottom:.5rem; max-width:360px; }
+.api-hint { font-size:.78rem; color:var(--muted); font-style:italic; }
+.chat-ui { display:flex; flex-direction:column; height:100%; }
+.chat-topbar { display:flex; justify-content:space-between; align-items:center; padding:1rem 1.5rem; border-bottom:1px solid rgba(255,255,255,.07); }
+.chat-ai-info { display:flex; align-items:center; gap:.75rem; }
+.ai-avatar { width:36px; height:36px; border-radius:50%; background:var(--grad); display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
+.ai-name { font-size:.9rem; font-weight:800; color:var(--text); }
+.ai-status { font-size:.72rem; color:var(--muted); }
+.lb-avatar { width:40px; height:40px; border-radius:50%; background:var(--grad); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
+.lb-name { font-size:.9rem; font-weight:800; color:var(--text); }
+.lb-sub { font-size:.72rem; color:var(--pink-bright); }
+.luna-badge { display:flex; align-items:center; gap:.75rem; padding:.85rem 1.25rem; background:var(--pink-dim); border:1px solid rgba(255,45,120,.25); border-radius:var(--radius); }
+.send-btn { border-radius:50%; width:42px; height:42px; padding:0; font-size:1.1rem; flex-shrink:0; }
