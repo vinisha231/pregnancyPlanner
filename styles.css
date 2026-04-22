@@ -647,3 +647,12 @@ body::before {
 * { box-sizing:border-box; }
 a { color:inherit; text-decoration:none; }
 img { max-width:100%; }
+
+/* ── MISSING BUTTON VARIANTS ── */
+.btn-full { width:100%; justify-content:center; }
+.btn-secondary { background:rgba(255,255,255,.07); color:var(--text-soft); border:1px solid var(--card-border); border-radius:var(--radius-pill); padding:.52rem 1.1rem; font-size:.82rem; font-weight:700; font-family:inherit; cursor:pointer; transition:all .2s; }
+.btn-secondary:hover { border-color:var(--pink); color:var(--pink); background:var(--pink-dim); }
+.btn-ghost-sm { background:rgba(255,255,255,.05); color:var(--muted); border:1px solid rgba(255,255,255,.1); border-radius:var(--radius-pill); padding:.4rem .9rem; font-size:.75rem; font-weight:700; font-family:inherit; cursor:pointer; transition:all .2s; }
+.btn-ghost-sm:hover { color:var(--text); border-color:var(--card-border); }
+.btn-link { background:none; border:none; color:var(--pink-bright); font-size:.82rem; font-weight:700; font-family:inherit; cursor:pointer; padding:.3rem 0; text-decoration:none; transition:color .2s; }
+.btn-link:hover { color:var(--pink); }
