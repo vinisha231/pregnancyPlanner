@@ -782,3 +782,15 @@ input[type=checkbox]:checked + .toggle-track .toggle-thumb { transform:translate
 .nav-link { color:var(--muted); text-decoration:none; font-size:.82rem; font-weight:700; padding:.4rem .75rem; border-radius:var(--radius-pill); transition:all .2s; letter-spacing:.2px; }
 .nav-link:hover { color:var(--text); background:rgba(255,255,255,.06); }
 .nav-link.active { color:var(--pink); background:var(--pink-dim); }
+
+/* ── SHIMMER ANIMATION ON STAT TILES ── */
+@keyframes shimmer { 0%{background-position:-200% center} 100%{background-position:200% center} }
+.stat-tile:hover .st-big { background-size:200% auto; animation:shimmer 1.5s linear infinite; }
+
+/* ── PULSE ON DUE DATE STAT ── */
+@keyframes pulsePink { 0%,100%{box-shadow:var(--glow-soft)} 50%{box-shadow:var(--glow)} }
+.stat-gold { animation:pulsePink 3s ease-in-out infinite; }
+
+/* ── FRUIT CIRCLE FLOAT ── */
+@keyframes floatFruit { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+.wsf-circle { animation:floatFruit 3.5s ease-in-out infinite; }
