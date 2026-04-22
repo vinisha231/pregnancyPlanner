@@ -569,3 +569,10 @@ body::before {
 .week-nav-btn { width:36px; height:36px; border-radius:50%; border:1.5px solid var(--card-border); background:var(--card); color:var(--text); font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .2s; }
 .week-nav-btn:hover { border-color:var(--pink); color:var(--pink); background:var(--pink-dim); }
 .week-nav-label { font-size:.9rem; font-weight:800; color:var(--text-soft); }
+
+/* ── SYMPTOM CHECKBOXES ── */
+.symptom-chip { display:flex; align-items:center; gap:.5rem; padding:.55rem .9rem; border-radius:var(--radius-pill); background:rgba(255,255,255,.04); border:1px solid var(--card-border); font-size:.8rem; color:var(--text-soft); cursor:pointer; transition:all .18s; font-weight:600; }
+.symptom-chip:hover { border-color:var(--pink); color:var(--text); }
+.symptom-chip.active { background:var(--pink-dim); border-color:var(--pink); color:var(--pink-bright); }
+.symptom-chip input { display:none; }
+.symptom-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:.5rem; }
