@@ -589,6 +589,12 @@ function renderChecklistContent() {
     const total     = allItems.length;
     const pct       = total ? Math.round((doneCount / total) * 100) : 0;
 
+    // Update sidebar progress card
+    setText('clProgressPct',   pct + '%');
+    setText('clProgressCount', `${doneCount} of ${total} items`);
+    const clBar = document.getElementById('clProgressBar');
+    if (clBar) clBar.style.width = pct + '%';
+
     let html = `
         <div class="checklist-progress">
             <span>${doneCount}/${total} packed</span>
