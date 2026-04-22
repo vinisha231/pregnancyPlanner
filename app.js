@@ -682,13 +682,17 @@ function renderNutrition() {
                 <span class="food-icon">${f.icon}</span>
                 <div>
                     <div class="food-name">${f.name}</div>
-                    <div class="food-note">${f.note}</div>
+                    <div class="food-why">${f.note}</div>
                 </div>
             </div>
         `).join('');
     };
     renderList(nutritionData.safe,  'safeList');
     renderList(nutritionData.avoid, 'avoidList');
+
+    // Update food counts
+    setText('safeCount',  nutritionData.safe.length  + ' foods');
+    setText('avoidCount', nutritionData.avoid.length + ' items');
 }
 
 function filterNutrition() {
