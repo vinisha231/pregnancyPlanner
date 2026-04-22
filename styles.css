@@ -794,3 +794,13 @@ input[type=checkbox]:checked + .toggle-track .toggle-thumb { transform:translate
 /* ── FRUIT CIRCLE FLOAT ── */
 @keyframes floatFruit { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
 .wsf-circle { animation:floatFruit 3.5s ease-in-out infinite; }
+
+/* ── SECTION ENTRANCE ANIMATION ── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none} }
+.section.active { animation:fadeUp .45s ease both; }
+
+/* ── HERO BADGE GLOW PULSE ── */
+.hero-badge { display:inline-block; padding:.4rem 1rem; border-radius:var(--radius-pill); background:var(--pink-dim); border:1px solid rgba(255,45,120,.3); font-size:.78rem; font-weight:800; color:var(--pink-bright); letter-spacing:.3px; margin-bottom:1.25rem; animation:pulsePink 4s ease-in-out infinite; }
+
+/* ── SECTION TAG ── */
+.section-tag { display:inline-block; padding:.28rem .85rem; border-radius:var(--radius-pill); background:var(--pink-dim); border:1px solid rgba(255,45,120,.25); font-size:.72rem; font-weight:800; color:var(--pink-bright); letter-spacing:.5px; text-transform:uppercase; margin-bottom:.65rem; }
