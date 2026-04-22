@@ -833,6 +833,14 @@ function handleChatKey(e) {
     }
 }
 
+function fillChat(text) {
+    const input = document.getElementById('chatInput');
+    if (input) {
+        input.value = text;
+        input.focus();
+    }
+}
+
 function appendMsg(text, type) {
     const el = document.getElementById('chatMessages');
     const div = document.createElement('div');
