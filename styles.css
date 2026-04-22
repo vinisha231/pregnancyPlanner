@@ -676,3 +676,19 @@ img { max-width:100%; }
 .wj-btn { background:rgba(255,255,255,.04); border:1px solid var(--card-border); border-radius:6px; color:var(--muted); font-size:.73rem; font-weight:700; font-family:inherit; cursor:pointer; padding:.35rem .2rem; transition:all .15s; }
 .wj-btn:hover { background:var(--pink-dim); border-color:var(--pink); color:var(--text); }
 .wj-btn.active { background:var(--pink); border-color:var(--pink); color:#fff; box-shadow:0 0 8px var(--pink-glow); }
+
+/* ── NUTRITION SECTION CLASSES ── */
+.nutrition-stats { display:grid; grid-template-columns:repeat(5,1fr); gap:1rem; margin-bottom:2rem; }
+.ns-item { background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.25rem; text-align:center; backdrop-filter:blur(12px); transition:all .2s; }
+.ns-item:hover { border-color:rgba(255,45,120,.3); transform:translateY(-2px); }
+.ns-num { display:block; font-size:1.5rem; font-weight:900; background:var(--grad-text); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.ns-label { font-size:.7rem; color:var(--muted); font-weight:600; margin-top:.3rem; display:block; }
+.nutrition-cols { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+.nutrition-card { background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius); padding:2rem; backdrop-filter:blur(12px); }
+.safe-card { border-color:rgba(0,229,176,.18); }
+.avoid-card { border-color:rgba(255,107,107,.18); }
+.nc-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; padding-bottom:.75rem; border-bottom:1px solid rgba(255,255,255,.07); }
+.nc-header h3 { font-size:1rem; font-weight:800; color:var(--text); }
+.nc-count { font-size:.75rem; font-weight:800; padding:.25rem .65rem; border-radius:var(--radius-pill); }
+.safe-count { background:rgba(0,229,176,.1); color:var(--mint); border:1px solid rgba(0,229,176,.2); }
+.avoid-count { background:rgba(255,107,107,.1); color:var(--coral); border:1px solid rgba(255,107,107,.2); }
