@@ -67,5 +67,9 @@ def chat():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
+    # Never enable the Werkzeug debugger by default: it exposes an interactive
+    # console that allows remote code execution. Opt in explicitly for local
+    # debugging via FLASK_DEBUG=1.
+    debug = os.environ.get("FLASK_DEBUG", "").lower() in ("1", "true", "yes")
     print(f"\n🤰  Mama's Journey running at http://localhost:{port}\n")
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(host="0.0.0.0", port=port, debug=debug)
