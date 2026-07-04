@@ -16,7 +16,17 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
 app = Flask(__name__, static_folder=".")
-CORS(app)
+# /api/chat proxies to Anthropic using a server-side API key. Allowing every
+# origin would let any website drive this endpoint and burn the key's quota,
+# so restrict CORS to an explicit allowlist (comma-separated ALLOWED_ORIGINS).
+_allowed_origins = [
+    o.strip()
+    for o in os.environ.get(
+        "ALLOWED_ORIGINS", "http://localhost:5000,http://127.0.0.1:5000"
+    ).split(",")
+    if o.strip()
+]
+CORS(app, resources={r"/api/*": {"origins": _allowed_origins}})
 
 SYSTEM_PROMPT = """You are a warm, knowledgeable pregnancy assistant called "Luna."
 Provide helpful, accurate information about pregnancy, symptoms, nutrition,
